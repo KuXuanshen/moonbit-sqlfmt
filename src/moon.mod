@@ -9,7 +9,7 @@
 //   "moonbitlang/x@0.4.6",
 // }
 
-name = "gmlewis/json-pretty"
+name = "KuXuanshen/json-pretty"
 
 version = "0.1.0"
 
