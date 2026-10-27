@@ -35,16 +35,15 @@ M3 sqlparser 0.x（第 2-3 月，可选）
 
 ### 任务清单
 
-- [ ] 安装 `moon` 工具链（官方安装指引），记录版本号到本文件「环境记录」节
-- [ ] 过一遍 [Tour of MoonBit](https://docs.moonbitlang.com) 语法导览
-- [ ] VS Code 插件安装验证（类型检查、补全、`moon test` 集成）
-- [ ] **热身项目**：JSON pretty-printer（与 formatter 技能同构：读入 → 结构化 → 缩进输出）
-  - `declare` 定义 `JsonValue` 枚举 + pretty 函数签名
-  - 快照测试 3 组：简单对象、嵌套数组、空值/转义字符
-- [ ] **发布演练**：把热身项目按 `moon new` 模板发布到 Mooncakes.io（一个 hello 级包即可）
-- [ ] GitHub 建 repo `moonbit-sqlfmt`，CI 用官方 `setup-moonbit` Action，跑绿一次 `moon test`
-- [ ] README 完善中英双语简介
-
+- [x] 安装 `moon` 工具链（官方安装指引），记录版本号到本文件「环境记录」节
+- [x] 过一遍 [Tour of MoonBit](https://docs.moonbitlang.com) 语法导览（AI 侧已按 `refs/moonbit-docs` 源码精读 fundamentals/tests 关键章节；人工通读待补）
+- [ ] VS Code 插件安装验证（类型检查、补全、`moon test` 集成）——需用户本机操作
+- [x] **热身项目**：JSON pretty-printer（与 formatter 技能同构：读入 → 结构化 → 缩进输出）
+  - [x] `declare` 定义 `JsonValue` 枚举 + pretty 函数签名
+  - [x] 快照测试 3 组：简单对象、嵌套数组、空值/转义字符（+额外 indent=4 用例，共 4 组）
+- [ ] **发布演练**：把热身项目按 `moon new` 模板发布到 Mooncakes.io（一个 hello 级包即可）——需 `moon login` + 用户真实 Mooncakes 用户名（当前包名 `gmlewis/json-pretty` 为模板默认，待改）
+- [ ] GitHub 建 repo `moonbit-sqlfmt`，CI 用官方 `setup-moonbit` Action，跑绿一次 `moon test`（workflow 已写好：`.github/workflows/ci.yml`，用 `hustcer/setup-moonbit@v1`；建 repo + push 需用户操作）
+- [x] README 完善中英双语简介（根 README 双语已有；包 README `src/README.mbt.md` 已补全）
 ### 验收标准
 
 1. Mooncakes.io 上能搜到自己发布的包
@@ -55,10 +54,10 @@ M3 sqlparser 0.x（第 2-3 月，可选）
 
 | 项 | 值 |
 |---|---|
-| moon 版本 | （待填写） |
-| 操作系统 | Windows |
-| core 版本 | （待填写） |
-
+| moon 版本 | 0.1.20261023 (3778465 2026-10-23) |
+| 操作系统 | Windows（bash 会话需 `export PATH="$HOME/.moon/bin:$PATH"`） |
+| core 版本 | refs/core 主干快照 2026-10-27 a0f1c5bf（moon 安装时另行 bundle 了 core） |
+| 备注 | GitHub 直连不通，clone/push 需代理 `http://127.0.0.1:7897` |
 ---
 
 ## M1 · sql-tokenizer v0.1（第 2-4 周）
@@ -168,6 +167,7 @@ M3 sqlparser 0.x（第 2-3 月，可选）
 ## 进度记录
 
 - 2026-10-27 ｜ 创建计划文档
+- 2026-10-27 ｜ M0 ｜ moon 0.1.20261023 安装完成；refs/ 初始化（core + moonbit-docs）；热身项目 json-pretty 完成（JsonValue + pretty + 4 组 inspect 快照测试全绿，moon check/test/fmt 通过）；CI workflow 就绪。待办：VS Code 验证、moon login 发布、GitHub 建 repo 推送
 - 2026-10-27 ｜ 更新 M2 scope：核心场景改为日志脏 SQL 容错美化，新增「与工作流的协同」节
 - （后续按「日期 ｜ 里程碑 ｜ 摘要」格式追加）
 
