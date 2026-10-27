@@ -37,7 +37,7 @@ M3 sqlparser 0.x（第 2-3 月，可选）
 
 - [x] 安装 `moon` 工具链（官方安装指引），记录版本号到本文件「环境记录」节
 - [x] 过一遍 [Tour of MoonBit](https://docs.moonbitlang.com) 语法导览（AI 侧已按 `refs/moonbit-docs` 源码精读 fundamentals/tests 关键章节；人工通读待补）
-- [ ] VS Code 插件安装验证（类型检查、补全、`moon test` 集成）——需用户本机操作
+- [~] VS Code 插件安装验证——用户决定暂缓（2026-10-27）：开发循环用 bash + moon 命令已验证可行，编译器工具链（moonc）独立于 IDE
 - [x] **热身项目**：JSON pretty-printer（与 formatter 技能同构：读入 → 结构化 → 缩进输出）
   - [x] `declare` 定义 `JsonValue` 枚举 + pretty 函数签名
   - [x] 快照测试 3 组：简单对象、嵌套数组、空值/转义字符（+额外 indent=4 用例，共 4 组）
