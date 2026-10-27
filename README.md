@@ -10,7 +10,7 @@
 
 | Milestone | Scope | Status |
 |---|---|---|
-| M0 | Environment + publish pipeline validation | 🟡 Almost done — warm-up package released |
+| M0 | Environment + publish pipeline validation | ✅ Done — warm-up package released, CI green |
 | M1 | `sql-tokenizer` v0.1 | ⬜ Not started |
 | M2 | `sql-formatter` v0.1 (self-use value) | ⬜ Not started |
 | M3 | `sqlparser` (optional) | ⬜ Not started |

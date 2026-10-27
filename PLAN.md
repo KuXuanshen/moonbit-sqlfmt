@@ -42,7 +42,7 @@ M3 sqlparser 0.x（第 2-3 月，可选）
   - [x] `declare` 定义 `JsonValue` 枚举 + pretty 函数签名
   - [x] 快照测试 3 组：简单对象、嵌套数组、空值/转义字符（+额外 indent=4 用例，共 4 组）
 - [x] **发布演练**：`KuXuanshen/json-pretty@0.1.0` 已发布到 Mooncakes.io（2026-10-27）；页面 https://mooncakes.io/docs/KuXuanshen/json-pretty ；第三方目录 `import` + `moon update` + check/test 闭环验证通过
-- [ ] GitHub 建 repo `moonbit-sqlfmt`，CI 用官方 `setup-moonbit` Action，跑绿一次 `moon test`（workflow 已写好：`.github/workflows/ci.yml`，用 `hustcer/setup-moonbit@v1`；建 repo + push 需用户操作）
+- [x] GitHub repo 建好：https://github.com/KuXuanshen/moonbit-sqlfmt （曾名 json-pretty 后改名），CI 用 `hustcer/setup-moonbit@v1` 跑绿 `moon check --deny-warn && moon test --deny-warn`（2026-10-27）
 - [x] README 完善中英双语：`README.md`（英文主文档）+ `README.zh-CN.md`（简体中文），互相链接；包 README `src/README.mbt.md` 已补全
 ### 验收标准
 
@@ -169,6 +169,7 @@ M3 sqlparser 0.x（第 2-3 月，可选）
 - 2026-10-27 ｜ 创建计划文档
 - 2026-10-27 ｜ M0 ｜ moon 0.1.20261023 安装完成；refs/ 初始化（core + moonbit-docs）；热身项目 json-pretty 完成（JsonValue + pretty + 4 组 inspect 快照测试全绿，moon check/test/fmt 通过）；CI workflow 就绪。待办：VS Code 验证、moon login 发布、GitHub 建 repo 推送
 - 2026-10-27 ｜ M0 ｜ 发布演练完成：moon login（用户 KuXuanshen）→ 包名改为 KuXuanshen/json-pretty → moon publish 200 OK → 第三方 import 闭环验证通过。VS Code 插件验证经用户决定暂缓
+- 2026-10-27 ｜ M0 ｜ GitHub repo https://github.com/KuXuanshen/moonbit-sqlfmt 推送完成，Actions CI 绿灯（check + test with --deny-warn）。M0 三条验收标准全部达成，里程碑关闭
 - 2026-10-27 ｜ 更新 M2 scope：核心场景改为日志脏 SQL 容错美化，新增「与工作流的协同」节
 - （后续按「日期 ｜ 里程碑 ｜ 摘要」格式追加）
 
