@@ -1,47 +1,49 @@
 # moonbit-sqlfmt
 
-> MoonBit 生态的 PostgreSQL 方向 SQL 格式化器（formatter → tokenizer → parser 渐进路线）
+**English** | [简体中文](README.zh-CN.md)
 
-**English**: A SQL formatter for PostgreSQL dialect, written in MoonBit. Growing from tokenizer → formatter → parser, one publishable library at a time.
+> A SQL formatter for the PostgreSQL dialect, written in MoonBit — growing from tokenizer → formatter → parser, one publishable library at a time.
 
-## 项目状态
+## Status
 
-**🚧 计划阶段** —— 路线图见 [PLAN.md](PLAN.md)，AI 协作规则见 [AGENTS.md](AGENTS.md)
+**🚧 Early stage** — roadmap in [PLAN.md](PLAN.md) (zh-CN), AI-collaboration rules in [AGENTS.md](AGENTS.md) (zh-CN)
 
-| 里程碑 | 内容 | 状态 |
+| Milestone | Scope | Status |
 |---|---|---|
-| M0 | 环境验证 + 发布流程跑通 | ⬜ 未开始 |
-| M0 | 环境验证 + 发布流程跑通 | 🟡 进行中（热身项目已完成，发布/CI 待用户操作） |
-| M1 | `sql-tokenizer` v0.1 | ⬜ 未开始 |
-| M2 | `sql-formatter` v0.1（自用价值达成点） | ⬜ 未开始 |
-| M3 | `sqlparser`（可选进阶） | ⬜ 未开始 |
+| M0 | Environment + publish pipeline validation | 🟡 Almost done — warm-up package released |
+| M1 | `sql-tokenizer` v0.1 | ⬜ Not started |
+| M2 | `sql-formatter` v0.1 (self-use value) | ⬜ Not started |
+| M3 | `sqlparser` (optional) | ⬜ Not started |
 
-## 动机
+**M0 artifact**: [`KuXuanshen/json-pretty`](https://mooncakes.io/docs/KuXuanshen/json-pretty) — a JSON pretty-printer (`JsonValue` tree + `JSON.stringify`-style indentation) that exercised the full declare → test → implement → publish loop on Mooncakes.io.
 
-1. **生态空位**：Mooncakes 上目前只有 PostgreSQL/SQLite 的客户端绑定，没有 SQL 格式化/解析库（发布前需查重，见 [docs/competitive-research.md](docs/competitive-research.md)）
-2. **需求经过验证**：JS 的 `sql-formatter` 周下载百万级，Python 的 `sqlparse` 是事实标准——需求真实存在
-3. **自用闭环**：日常工作中生成 SQL（ufx-gen-sql）、排查 TraceId 日志里的裸 SQL，格式化器做完直接接入现有工作流
+## Why
 
-## 路线一句话
+1. **Ecosystem gap**: Mooncakes currently only has PostgreSQL/SQLite *client bindings* — no SQL formatting/parsing library (to be re-checked before release, see `docs/competitive-research.md`)
+2. **Proven demand**: JS `sql-formatter` gets millions of weekly downloads; Python `sqlparse` is the de-facto standard
+3. **Daily-driver**: the author generates SQL and digs raw SQL out of TraceId logs at work — the formatter plugs straight into that workflow
+
+## Roadmap in one line
 
 ```
-Tokenizer（纯函数+快照测试） → Formatter（PG 方向格式化） → Parser（AST 子集）
+Tokenizer (pure functions + snapshot tests) → Formatter (PostgreSQL) → Parser (AST subset)
 ```
 
-每个阶段都是**独立可发布**的库，随时可停在最近的里程碑。
+Every stage ships as an **independently publishable** library; the project can pause at any milestone with something complete.
 
-## 参考与对标
+## References
 
-- [sql-formatter](https://github.com/sql-formatter-org/sql-formatter)（JS）— 格式化规则与配置项设计参考
-- [sqlparse](https://github.com/andialbrecht/sqlparse)（Python）— tokenizer/parser 架构参考
-- [moonbitlang/core](https://github.com/moonbitlang/core) — MoonBit 标准库源码（开发时的 API 事实来源，见 `refs/`）
+- [sql-formatter](https://github.com/sql-formatter-org/sql-formatter) (JS) — formatting rules & config design
+- [sqlparse](https://github.com/andialbrecht/sqlparse) (Python) — tokenizer/parser architecture
+- [moonbitlang/core](https://github.com/moonbitlang/core) — the source of truth for MoonBit APIs during development (kept under `refs/`)
 
-## 许可证
+## License
 
-Apache-2.0（待首个发布前确认）
+Apache-2.0
 
-## 相关文档
+## Related docs
 
-- [PLAN.md](PLAN.md) — 总计划：里程碑、任务分解、验收标准、风险
-- [AGENTS.md](AGENTS.md) — AI 辅助开发约定（喂真实源码、declare 先行、测试纪律）
-- [docs/competitive-research.md](docs/competitive-research.md) — 生态查重清单
+- [PLAN.md](PLAN.md) — master plan: milestones, tasks, acceptance criteria, risks (zh-CN)
+- [AGENTS.md](AGENTS.md) — AI collaboration rules: real-source-only API usage, declare-first, test discipline (zh-CN)
+- [docs/competitive-research.md](docs/competitive-research.md) — ecosystem gap checklist (zh-CN)
+- [README.zh-CN.md](README.zh-CN.md) — 简体中文版

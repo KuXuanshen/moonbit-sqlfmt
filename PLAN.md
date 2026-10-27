@@ -43,7 +43,7 @@ M3 sqlparser 0.x（第 2-3 月，可选）
   - [x] 快照测试 3 组：简单对象、嵌套数组、空值/转义字符（+额外 indent=4 用例，共 4 组）
 - [x] **发布演练**：`KuXuanshen/json-pretty@0.1.0` 已发布到 Mooncakes.io（2026-10-27）；页面 https://mooncakes.io/docs/KuXuanshen/json-pretty ；第三方目录 `import` + `moon update` + check/test 闭环验证通过
 - [ ] GitHub 建 repo `moonbit-sqlfmt`，CI 用官方 `setup-moonbit` Action，跑绿一次 `moon test`（workflow 已写好：`.github/workflows/ci.yml`，用 `hustcer/setup-moonbit@v1`；建 repo + push 需用户操作）
-- [x] README 完善中英双语简介（根 README 双语已有；包 README `src/README.mbt.md` 已补全）
+- [x] README 完善中英双语：`README.md`（英文主文档）+ `README.zh-CN.md`（简体中文），互相链接；包 README `src/README.mbt.md` 已补全
 ### 验收标准
 
 1. Mooncakes.io 上能搜到自己发布的包
