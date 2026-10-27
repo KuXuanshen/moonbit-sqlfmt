@@ -1,0 +1,23 @@
+// Generated using `moon info`, DON'T EDIT IT
+package "gmlewis/json-pretty"
+
+// Values
+
+// Errors
+
+// Types and methods
+pub(all) enum JsonValue {
+  Null
+  Bool(Bool)
+  Number(Double)
+  Str(String)
+  Arr(Array[JsonValue])
+  Obj(Array[(String, JsonValue)])
+} derive(Eq)
+pub fn JsonValue::equal(Self, Self) -> Bool
+pub fn JsonValue::not_equal(Self, Self) -> Bool
+pub fn JsonValue::pretty(Self, indent? : Int32) -> String
+
+// Type aliases
+
+// Traits
