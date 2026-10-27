@@ -1,5 +1,5 @@
-// import {
-//   "gmlewis/json-pretty" @lib,
-// }
+import {
+  "gmlewis/json-pretty" @lib,
+}
 
 pkgtype(kind: "executable")

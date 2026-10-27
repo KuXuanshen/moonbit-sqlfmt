@@ -19,8 +19,8 @@ repository = ""
 
 license = "Apache-2.0"
 
-keywords = [ ]
+keywords = [ "json", "pretty-print", "formatter" ]
 
 preferred_target = "wasm"
 
-description = ""
+description = "JSON pretty-printer: JsonValue tree with JSON.stringify-style indentation. Warm-up package for the moonbit-sqlfmt toolchain."
